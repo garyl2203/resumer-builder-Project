@@ -46,7 +46,7 @@ var education = {
     "onlineCourses" : [
     {
     "name" :  "Udacity" ,
-	"dates" : "2016 - 2017"  ,
+	"dates" : "2016 - Current"  ,
 	"degree" : "Nanodegree" ,
 	"location" : "Hong Kong" ,
 	"majors" : ["Self-Driving Car Engineer"] ,
@@ -188,17 +188,13 @@ bio.display = function() {
  var formattedlocation = HTMLlocation.replace("%data%", bio.ContactInfo.location);
  var formattedmessage = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
  
-
 $("#header").prepend(formattedrole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedbioPic);
-
-
 $("#topContacts").append(formattedmobile);
 $("#topContacts").append(formattedemail);
 $("#topContacts").append(formattedgithub);
 $("#topContacts").append(formattedlocation);
-
 $("#header").append(formattedmessage);
 
 };
@@ -210,7 +206,6 @@ bio.display();
 
 bio.addskills = function(){
 $("#header").append(HTMLskillsStart);
-
 var i;
 
 for ( i = 0; i < bio.skills.length; i++) {
@@ -234,20 +229,16 @@ bio.addskills();
 
 
 work.display = function() {
-
 var i;
-//console.log(work.companies.length)
 
 for ( i = 0; i < work.companies.length; i++)  {
 $("#workExperience").append(HTMLworkStart);
-
 
 var formattedempl = HTMLworkEmployer.replace("%data%", work.companies[i].employer).replace("#",  work.companies[i].url);
 var formattedtitle = HTMLworkTitle.replace("%data%", work.companies[i].position);
 var formatteddates = HTMLworkDates.replace("%data%", work.companies[i].dates);
 var formattedworkcity = HTMLworkLocation.replace("%data%", work.companies[i].location);
 var formattedworkdesc = HTMLworkDescription.replace("%data%", work.companies[i].description);
-
 var formattedEmplTitle = formattedempl + formattedtitle
 
 $(".work-entry:last").append(formattedEmplTitle);
@@ -274,7 +265,6 @@ projects.display = function() {
 for ( project in projects.projects)  {
 $("#projects").append(HTMLprojectStart);
 
-
 var formattedprojtitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#",  projects.projects[project].url);
 var formattedprojdates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 var formattedprojdescr = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
@@ -293,8 +283,6 @@ if (projects.projects[project].images.length > 0) {
 }
 };
 
-
-
 projects.display();
 
 
@@ -308,7 +296,6 @@ projects.display();
 
 
 education.display = function() {
-
 var i;
 
 for ( i = 0; i < education.schools.length; i++)  {
@@ -319,9 +306,7 @@ var formatteddegree = HTMLschoolDegree.replace("%data%", education.schools[i].de
 var formattedschooldates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
 var formattedstudycity = HTMLschoolLocation.replace("%data%", education.schools[i].location);
 var formattedmajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
-
 var fomrattedEdunameDegree = formattedEduName + formatteddegree
-
 
 $(".education-entry:last").append(fomrattedEdunameDegree);
 $(".education-entry:last").append(formattedschooldates);
@@ -340,22 +325,17 @@ education.display();
 $(".education-entry:last").append(HTMLonlineClasses);
 
 education.display = function() {
-
-
 var i;
 
 for ( i = 0; i < education.onlineCourses.length; i++)  {
-
 
 var formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].majors).replace("#",  education.onlineCourses[i].url);
 var formattedOnlineEduName = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].name);
 var formattedonlinedates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
 var formattedonlineunits = HTMLschoolMajor.replace("%data%", education.onlineCourses[i].units);
-
 var formattedEdunameOnlinetitle = formattedonlinetitle + formattedOnlineEduName
 
 $(".education-entry:last").append(formattedEdunameOnlinetitle);
-//$("#education").append(formattedOnlineEduName);
 $(".education-entry:last").append(formattedonlinedates);
 $(".education-entry:last").append(formattedonlineunits);
 
@@ -381,9 +361,7 @@ function inName(name) {
 }
 
 
-
 $("#mapDiv").append(googleMap);
-
 
  var formattedmobile = HTMLmobile.replace("%data%", bio.ContactInfo.mobile);
  var formattedemail = HTMLemail.replace("%data%", bio.ContactInfo.email);
