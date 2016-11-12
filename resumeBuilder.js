@@ -145,11 +145,28 @@ var projects = {
 		  'as well as gaining other soft skills such as re-conceptualising, gathering valuble information ' +
 		  'relating to the aerodynamics and engineering, being persistent and above all, having fun!' ,
          "images" : [
-         "https://davidsonautomotivedotcom.files.wordpress.com/2015/05/structure_fuselage4.png" ,
-         "https://davidsonautomotivedotcom.files.wordpress.com/2015/05/final-render2.png"
+         "https://davidsonautomotivedotcom.files.wordpress.com/2015/05/final-render2.png?w=500&h=&crop=1",
+         "https://davidsonautomotivedotcom.files.wordpress.com/2015/05/structure_fuselage4.png?w=500&h=&crop=1"
          ],
          "url" : "https://localmotors.com/"
-	}
+	},
+
+    {
+		"title" : "Sailor Bag design – Portfolio" ,
+		"dates" : "2015" ,
+		"description" : 'For this personal project I focused soley on design using ' +
+		  'Scottish fabric and Italian leather. Key areas I wanted to focus on: ' +
+		  'Brand/image visualisation, management of a small team, and website layout/design. ' +
+		  'I also wanted to focus on the usage of quality materials, as I am aspiring to be ' +
+		  'working in the automotive industry, I wanted to gain more skills relating to ' +
+ 		  'fashion design as well as automotive design.' ,
+         "images" : [
+         "https://lh3.googleusercontent.com/agNMtnwZQihFvE5qGyA71ZpkHMBzrs4JRzTHuE0ZVxbamkCSCeRKVTLOjEO1NthAO9WmXW-TvQ=w960-h540-no",
+         "https://lh3.googleusercontent.com/ijb2eO1aGsDCqyUL7r80TMu0vy851dwM2FqtDXB-gUpM3zxPg1QVuzrY25qAs4wbK61nTiKykA=w960-h540-no"
+         ],
+         "url" : "http://www.pocherouge.com/"
+	},
+
 	]
 
 }
@@ -254,26 +271,29 @@ work.display();
 
 projects.display = function() {
 
-var i;
-//console.log(work.companies.length)
-
-for ( i = 0; i < projects.projects.length; i++)  {
+for ( project in projects.projects)  {
 $("#projects").append(HTMLprojectStart);
 
 
-var formattedprojtitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#",  projects.projects[i].url);
-var formattedprojdates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
-var formattedprojdescr = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-var formattedprojimage = HTMLprojectImage.replace("%data%", projects.projects[i].images[0]);
-
+var formattedprojtitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#",  projects.projects[project].url);
+var formattedprojdates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+var formattedprojdescr = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 
 $(".project-entry:last").append(formattedprojtitle);
 $(".project-entry:last").append(formattedprojdates);
 $(".project-entry:last").append(formattedprojdescr);
-//$("#projects").append(formattedprojimage);
+
+if (projects.projects[project].images.length > 0) {
+	for (image in projects.projects[project].images) {
+		var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+		$(".project-entry:last").append(formattedImage);
+	}
+}
 
 }
 };
+
+
 
 projects.display();
 
@@ -345,12 +365,15 @@ $(".education-entry:last").append(formattedonlineunits);
 education.display();
 
 
-
+$("#main").prepend(internationalizeButton);
 
 
 function inName(name) {
+
 	name = name.trim().split(" ");
+
 	console.log(name);
+
 	name[1] = name[1].toUpperCase();
 	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
 
@@ -358,7 +381,15 @@ function inName(name) {
 }
 
 
-$("#main").append(internationalizeButton);
+
+$("#mapDiv").append(googleMap);
 
 
-
+ var formattedmobile = HTMLmobile.replace("%data%", bio.ContactInfo.mobile);
+ var formattedemail = HTMLemail.replace("%data%", bio.ContactInfo.email);
+ var formattedgithub = HTMLgithub.replace("%data%", bio.ContactInfo.github);
+ var formattedlocation = HTMLlocation.replace("%data%", bio.ContactInfo.location);
+$("#footerContacts").append(formattedmobile);
+$("#footerContacts").append(formattedemail);
+$("#footerContacts").append(formattedgithub);
+$("#footerContacts").append(formattedlocation);
