@@ -14,7 +14,6 @@ var bio = {
      "bioPic" : "images/mefixed.jpg"
 }
 
-
 var education = {  
 	"schools" : [
 	{
@@ -64,9 +63,6 @@ var education = {
     }
     ]
 }
-
-
-
 
 var work = {
 	"companies" : [
@@ -128,7 +124,6 @@ var work = {
 	                 'statistical figures for other de-industrialised regions of Europe. ' 
 	},
     ]
-
 }
 
 var projects = {
@@ -150,7 +145,6 @@ var projects = {
          ],
          "url" : "https://localmotors.com/"
 	},
-
     {
 		"title" : "Sailor Bag design – Portfolio" ,
 		"dates" : "2015" ,
@@ -166,22 +160,13 @@ var projects = {
          ],
          "url" : "http://www.pocherouge.com/"
 	},
-
 	]
-
 }
-
-
-
-
-
-
 
 bio.display = function() { 
  var formattedName = HTMLheaderName.replace("%data%", bio.Name);
  var formattedrole = HTMLheaderRole.replace("%data%", bio.role);
  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
- 
  var formattedmobile = HTMLmobile.replace("%data%", bio.ContactInfo.mobile);
  var formattedemail = HTMLemail.replace("%data%", bio.ContactInfo.email);
  var formattedgithub = HTMLgithub.replace("%data%", bio.ContactInfo.github);
@@ -203,7 +188,6 @@ bio.display();
 
 
 
-
 bio.addskills = function(){
 $("#header").append(HTMLskillsStart);
 var i;
@@ -218,13 +202,6 @@ for ( i = 0; i < bio.skills.length; i++) {
 };
 
 bio.addskills();
-
-
-
-
-
-
-
 
 
 
@@ -251,12 +228,6 @@ $(".work-entry:last").append(formattedworkdesc);
 };
 
 work.display();
-
-
-
-
-
-
 
 
 
@@ -287,14 +258,6 @@ projects.display();
 
 
 
-
-
-
-
-
-
-
-
 education.display = function() {
 var i;
 
@@ -317,8 +280,6 @@ $(".education-entry:last").append(formattedmajor);
 };
 
 education.display();
-
-
 
 
 
