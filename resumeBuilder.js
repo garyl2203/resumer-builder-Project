@@ -134,8 +134,8 @@ var projects = {
 		"title" : "Project Silverbolt – Emergency Cargo Delivery Drone – Local Motors/Airbus" ,
 		"dates" : "2016" ,
 		"description" : 'The purpose of this project competition is to design a drone ' +
-		  'that will deliver medical or emergency supplies to far or ' +
-		  'remote regions of the planet where terrain is difficult. The design was created and rendered in Blender, ' +
+		  'that will deliver medical or emergency supplies to far or remote ' +
+		  'regions of the planet where terrain is difficult. The design was created and rendered in Blender, ' +
 		  'with the concept inspired by aircraft such as the Saab J21-R. I learned to work under strict ' +
 		  'deadlines as well as receiving good, constructive criticism for future improvements. ' +
  		  'I further strengthened my experience in 3D modelling and design skills ' +
@@ -158,9 +158,12 @@ var projects = {
 		  'working in the automotive industry, I wanted to gain more skills relating to ' +
  		  'fashion design as well as automotive design.' ,
          "images" : [
-         "https://lh3.googleusercontent.com/agNMtnwZQihFvE5qGyA71ZpkHMBzrs4JRzTHuE0ZVxbamkCSCeRKVTLOjEO1NthAO9WmXW-TvQ=w960-h540-no",
-         "https://lh3.googleusercontent.com/ijb2eO1aGsDCqyUL7r80TMu0vy851dwM2FqtDXB-gUpM3zxPg1QVuzrY25qAs4wbK61nTiKykA=w960-h540-no",
-         "https://lh3.googleusercontent.com/_FVCygDxqe6TBgsPJGhaAXjwAQlIV8XMHTlynVon8hcLUZtOvbh_i3zIN7ZAg_sRXAd6RjaiwA=w960-h540-no"
+         "https://lh3.googleusercontent.com/agNMtnwZQihFvE5qGyA71ZpkHMBzrs4JRzTHuE0ZVxbamk" +
+         "CSCeRKVTLOjEO1NthAO9WmXW-TvQ=w960-h540-no",
+         "https://lh3.googleusercontent.com/ijb2eO1aGsDCqyUL7r80TMu0vy851dwM2FqtDXB-gUpM3z" +
+         "xPg1QVuzrY25qAs4wbK61nTiKykA=w960-h540-no",
+         "https://lh3.googleusercontent.com/_FVCygDxqe6TBgsPJGhaAXjwAQlIV8XMHTlynVon8hcLUZ" +
+         "tOvbh_i3zIN7ZAg_sRXAd6RjaiwA=w960-h540-no"
          ],
          "url" : "http://www.pocherouge.com/"
 	},
@@ -174,7 +177,8 @@ var projects = {
 		  'and AutoCAD. ' ,
          "images" : [
          "https://davidsonautomotivedotcom.files.wordpress.com/2015/10/car-render.png?w=600&h=&crop=1",
-         "https://lh3.googleusercontent.com/-KXs0V5l2kzY/V9pU2KWTi1I/AAAAAAAABsY/hlg7zW2VSsQ4bO6NcPTRWJOdvIuJsGX2gCJoC/w730-h289-p/RoughSketch2%2Bcopy.jpg"
+         "https://lh3.googleusercontent.com/-KXs0V5l2kzY/V9pU2KWTi1I/AAAAAAAABsY/" +
+         "hlg7zW2VSsQ4bO6NcPTRWJOdvIuJsGX2gCJoC/w730-h289-p/RoughSketch2%2Bcopy.jpg"
          ],
          "url" : "https://davidson-automotive.com/about/portfolio-2/"
 	},
@@ -205,8 +209,6 @@ $("#header").append(formattedmessage);
 
 bio.display();
 
-
-
 bio.addskills = function(){
 $("#header").append(HTMLskillsStart);
 var i;
@@ -222,15 +224,14 @@ for ( i = 0; i < bio.skills.length; i++) {
 
 bio.addskills();
 
-
-
 work.display = function() {
 var i;
 
 for ( i = 0; i < work.companies.length; i++)  {
 $("#workExperience").append(HTMLworkStart);
 
-var formattedempl = HTMLworkEmployer.replace("%data%", work.companies[i].employer).replace("#",  work.companies[i].url);
+var formattedempl = HTMLworkEmployer.replace("%data%", work.companies[i].employer
+	).replace("#",work.companies[i].url);
 var formattedtitle = HTMLworkTitle.replace("%data%", work.companies[i].title);
 var formatteddates = HTMLworkDates.replace("%data%", work.companies[i].dates);
 var formattedworkcity = HTMLworkLocation.replace("%data%", work.companies[i].location);
@@ -248,14 +249,13 @@ $(".work-entry:last").append(formattedworkdesc);
 
 work.display();
 
-
-
 projects.display = function() {
 
 for ( project in projects.projects)  {
 $("#projects").append(HTMLprojectStart);
 
-var formattedprojtitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#",  projects.projects[project].url);
+var formattedprojtitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title
+	).replace("#",projects.projects[project].url);
 var formattedprojdates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 var formattedprojdescr = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 
@@ -275,15 +275,14 @@ if (projects.projects[project].images.length > 0) {
 
 projects.display();
 
-
-
 education.display = function() {
 var i;
 
 for ( i = 0; i < education.schools.length; i++)  {
 $("#education").append(HTMLschoolStart);
 
-var formattedEduName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#",  education.schools[i].url);
+var formattedEduName = HTMLschoolName.replace("%data%", education.schools[i].name
+	).replace("#",education.schools[i].url);
 var formatteddegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
 var formattedschooldates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
 var formattedstudycity = HTMLschoolLocation.replace("%data%", education.schools[i].location);
@@ -300,8 +299,6 @@ $(".education-entry:last").append(formattedmajor);
 
 education.display();
 
-
-
 $(".education-entry:last").append(HTMLonlineClasses);
 
 education.display = function() {
@@ -309,7 +306,8 @@ var i;
 
 for ( i = 0; i < education.onlineCourses.length; i++)  {
 
-var formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#",  education.onlineCourses[i].url);
+var formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title
+    ).replace("#",education.onlineCourses[i].url);
 var formattedOnlineEduName = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
 var formattedonlinedates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
 var formattedonlineunits = HTMLschoolMajor.replace("%data%", education.onlineCourses[i].units);
@@ -351,5 +349,3 @@ $("#footerContacts").append(formattedmobile);
 $("#footerContacts").append(formattedemail);
 $("#footerContacts").append(formattedgithub);
 $("#footerContacts").append(formattedlocation);
-
-
