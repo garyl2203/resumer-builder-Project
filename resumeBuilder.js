@@ -1,16 +1,17 @@
 var bio = {
-	"Name" : "Gary Lai",
-	"role" : "Self-Driving Car Engineer" ,
-	"ContactInfo" : {
+	"name" : "Gary Lai",
+	"role" : "Automotive Design + Self-Driving Car Engineer" ,
+	"contacts" : {
         "email" : "gary.lai.31337@gmail.com" ,
          "mobile" : "55749869" ,
          "location" : "Hong Kong" ,
          "github" : "garyl2203"
 	},
-	"WelcomeMessage" : "Love what you do, Do what you love" ,
+	"WelcomeMessage" : "I can't change the direction of the wind, but I can adjust " +
+	"my sails so I'll eventually reach my destination - James Dean" ,
 	"skills" : [ 
-	     'Photoshop' , 'Blender', 'WordPress' , 'CatiaV5' , 'Python' , 'R' , 
-	     'AutoCAD'  , 'HTML/CSS' ],
+	     ' Photoshop ' , ' Blender ', ' WordPress ' , ' CatiaV5 ' , ' Python ' , ' R ' , 
+	     ' AutoCAD '  , ' HTML/CSS ' , ' LaTex ', ' Javascript ', ],
      "bioPic" : "images/mefixed.jpg"
 }
 
@@ -18,47 +19,47 @@ var education = {
 	"schools" : [
 	{
 	"name" :  "Intrinsys Engineering" ,
-	"dates" : "2016"  ,
-	"degree" : "Certificate of Completion" ,
 	"location" : "Milton Keynes" ,
+	"degree" : "Certificate of Completion" ,
 	"majors" : ["CatiaV5 Fundamentals"] ,
+	"dates" : "2016"  ,
 	"url" : "http://www.intrinsys.com/engineering"
     },
     {
 	"name" :  "Welkin Systems Ltd" ,
-	"dates" : "2015"  ,
-	"degree" : "Diploma" ,
 	"location" : "Hong Kong" ,
+	"degree" : "Diploma" ,
 	"majors" : ["Computer Aided Design with Autodesk"] ,
+	"dates" : "2015"  ,
 	"url" : "http://www.welkin.com.hk/"
     },
     {
     "name" :  "The University of Edinburgh" ,
+    "location" : "Edinburgh" ,
+    "degree" : "BSc Mathematics and Statistics" ,
+    "majors" : ["R Statistical Programming" , " Linear Modelling"] ,
 	"dates" : "2007-2011"  ,
-	"degree" : "BSc Mathematics and Statistics" ,
-	"location" : "Edinburgh" ,
-	"majors" : ["R Statistical Programming" , " Linear Modelling"] ,
 	"url" : "http://www.ed.ac.uk/"
     }
 	],
 
     "onlineCourses" : [
     {
-    "name" :  "Udacity" ,
+    "school" :  "Udacity" ,
+    "location" : "Hong Kong" ,
+    "degree" : "Nanodegree" ,
+	"title" : ["Self-Driving Car Engineer"] ,
 	"dates" : "2016 - Current"  ,
-	"degree" : "Nanodegree" ,
-	"location" : "Hong Kong" ,
-	"majors" : ["Self-Driving Car Engineer"] ,
-	"units" : ["Machine Learning" , "Computer Vision"] ,
+	"units" : ["Python" , " Computer Vision"] ,
 	"url" : "https://www.udacity.com/classic"
     },
     {
-	"name" :  "Udacity" ,
+	"school" :  "Udacity" ,
+	"location" : "Hong Kong" ,
 	"dates" : "2016"  ,
 	"degree" : "Nanodegree" ,
-	"location" : "Hong Kong" ,
-	"majors" : ["Intro to Programming"] ,
-	"units" : ["Python" , "HTML", "CSS" , "Javascript"] ,
+	"title" : ["Intro to Programming"] ,
+	"units" : ["Python" , " HTML", " CSS" , " Javascript"] ,
 	"url" : "https://www.udacity.com/classic"
     }
     ]
@@ -67,7 +68,7 @@ var education = {
 var work = {
 	"companies" : [
 	{
-	"position" :  "Mathematics Instructor" ,
+	"title" :  "Mathematics Instructor" ,
 	"employer" :  "iThink Education" ,
 	"dates" :  "2014 - current" ,
 	"location" :  "Hong Kong" , 
@@ -77,7 +78,7 @@ var work = {
 	                'schools such as German Swiss International. ' 
     },
     {
-	"position" :  "Teacher" ,
+	"title" :  "Teacher" ,
 	"employer" :  "English for Asia" ,
 	"dates" :  "2013" ,
 	"location" :  "Hong Kong" ,
@@ -86,17 +87,17 @@ var work = {
 	                 'students, as well as organizing and conducting classroom management.'
     },
     {
-	"position" :  "Flow Data Analyst" ,
+	"title" :  "Flow Data Analyst" ,
 	"employer" :  "ADS Environmental Services" ,
 	"dates" :  "2012 - 2013" ,
 	"location" :  "Sydney"  ,
 	"url" : "http://www.adsenv.com/" ,
-	"description" :  'Work effectively with senior data analysts to identify data quality ' +
+	"description" :  'Work with senior data analysts to identify data quality ' +
 	                 'issues, performed daily data mining procedures to examine water flow, ' +
 	                 'experienced with troubleshooting and maintenance of large datasets. ' 
     },
     {
-	"position" :  "Data Auditor" ,
+	"title" :  "Data Auditor" ,
 	"employer" :  "Mike Ritchie & Associates" ,
 	"dates" :  "2013" ,
 	"location" :  "Sydney"  ,
@@ -105,7 +106,7 @@ var work = {
 	                 'on types of waste produced by households, requiring a keen eye for detail. ' 
     },
     {
-	"position" :  "Research Assistant" ,
+	"title" :  "Research Assistant" ,
 	"employer" :  "Hong Kong University" ,
 	"dates" :  "2012" ,
 	"location" :  "Hong Kong"  ,
@@ -114,13 +115,13 @@ var work = {
 	                 'medical articles, used excel to analyze data from short surveys and questionnaires. '
     },
     {
-	"position" :  "Assistant Public Health Researcher" ,
+	"title" :  "Assistant Public Health Researcher" ,
 	"employer" :  "Glasgow Centre for Population Health" ,
 	"dates" :  "2010" ,
 	"location" :  "Glasgow"  ,
 	"url" : "http://www.gcph.co.uk/" ,
 	"description" :  'Performed initial analyses of life expectancy and income inequality ' +
-	                 'for the West of Scotland, compile reports of findings including ' +
+	                 'for the West of Scotland, used SPSS to create reports of findings including ' +
 	                 'statistical figures for other de-industrialised regions of Europe. ' 
 	},
     ]
@@ -129,6 +130,7 @@ var work = {
 var projects = {
 	"projects": [
 	{
+		"employer" : "none" ,
 		"title" : "Project Silverbolt – Emergency Cargo Delivery Drone – Local Motors/Airbus" ,
 		"dates" : "2016" ,
 		"description" : 'The purpose of this project competition is to design a drone ' +
@@ -146,6 +148,7 @@ var projects = {
          "url" : "https://localmotors.com/"
 	},
     {
+    	"employer" : "none" ,
 		"title" : "Sailor Bag design – Portfolio" ,
 		"dates" : "2015" ,
 		"description" : 'For this personal project I focused soley on design using ' +
@@ -156,21 +159,37 @@ var projects = {
  		  'fashion design as well as automotive design.' ,
          "images" : [
          "https://lh3.googleusercontent.com/agNMtnwZQihFvE5qGyA71ZpkHMBzrs4JRzTHuE0ZVxbamkCSCeRKVTLOjEO1NthAO9WmXW-TvQ=w960-h540-no",
-         "https://lh3.googleusercontent.com/ijb2eO1aGsDCqyUL7r80TMu0vy851dwM2FqtDXB-gUpM3zxPg1QVuzrY25qAs4wbK61nTiKykA=w960-h540-no"
+         "https://lh3.googleusercontent.com/ijb2eO1aGsDCqyUL7r80TMu0vy851dwM2FqtDXB-gUpM3zxPg1QVuzrY25qAs4wbK61nTiKykA=w960-h540-no",
+         "https://lh3.googleusercontent.com/_FVCygDxqe6TBgsPJGhaAXjwAQlIV8XMHTlynVon8hcLUZtOvbh_i3zIN7ZAg_sRXAd6RjaiwA=w960-h540-no"
          ],
          "url" : "http://www.pocherouge.com/"
 	},
+    {
+    	"employer" : "none" ,
+		"title" : "Automotive design – Portfolio" ,
+		"dates" : "2015 - Current" ,
+		"description" : 'I will be attending Scuola Politecnica di Design  in Milan ' +
+		  'next year to study Car Design. I am also aspiring to work for the automotive ' +
+		  'industry. I am familiar with a variaty of 3D software such as Blender, CatiaV5 ' +
+		  'and AutoCAD. ' ,
+         "images" : [
+         "https://davidsonautomotivedotcom.files.wordpress.com/2015/10/car-render.png?w=600&h=&crop=1",
+         "https://lh3.googleusercontent.com/-KXs0V5l2kzY/V9pU2KWTi1I/AAAAAAAABsY/hlg7zW2VSsQ4bO6NcPTRWJOdvIuJsGX2gCJoC/w730-h289-p/RoughSketch2%2Bcopy.jpg"
+         ],
+         "url" : "https://davidson-automotive.com/about/portfolio-2/"
+	},
+
 	]
 }
 
 bio.display = function() { 
- var formattedName = HTMLheaderName.replace("%data%", bio.Name);
+ var formattedName = HTMLheaderName.replace("%data%", bio.name);
  var formattedrole = HTMLheaderRole.replace("%data%", bio.role);
  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
- var formattedmobile = HTMLmobile.replace("%data%", bio.ContactInfo.mobile);
- var formattedemail = HTMLemail.replace("%data%", bio.ContactInfo.email);
- var formattedgithub = HTMLgithub.replace("%data%", bio.ContactInfo.github);
- var formattedlocation = HTMLlocation.replace("%data%", bio.ContactInfo.location);
+ var formattedmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+ var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
+ var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+ var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
  var formattedmessage = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
  
 $("#header").prepend(formattedrole);
@@ -212,7 +231,7 @@ for ( i = 0; i < work.companies.length; i++)  {
 $("#workExperience").append(HTMLworkStart);
 
 var formattedempl = HTMLworkEmployer.replace("%data%", work.companies[i].employer).replace("#",  work.companies[i].url);
-var formattedtitle = HTMLworkTitle.replace("%data%", work.companies[i].position);
+var formattedtitle = HTMLworkTitle.replace("%data%", work.companies[i].title);
 var formatteddates = HTMLworkDates.replace("%data%", work.companies[i].dates);
 var formattedworkcity = HTMLworkLocation.replace("%data%", work.companies[i].location);
 var formattedworkdesc = HTMLworkDescription.replace("%data%", work.companies[i].description);
@@ -290,8 +309,8 @@ var i;
 
 for ( i = 0; i < education.onlineCourses.length; i++)  {
 
-var formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].majors).replace("#",  education.onlineCourses[i].url);
-var formattedOnlineEduName = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].name);
+var formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#",  education.onlineCourses[i].url);
+var formattedOnlineEduName = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
 var formattedonlinedates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
 var formattedonlineunits = HTMLschoolMajor.replace("%data%", education.onlineCourses[i].units);
 var formattedEdunameOnlinetitle = formattedonlinetitle + formattedOnlineEduName
@@ -324,11 +343,13 @@ function inName(name) {
 
 $("#mapDiv").append(googleMap);
 
- var formattedmobile = HTMLmobile.replace("%data%", bio.ContactInfo.mobile);
- var formattedemail = HTMLemail.replace("%data%", bio.ContactInfo.email);
- var formattedgithub = HTMLgithub.replace("%data%", bio.ContactInfo.github);
- var formattedlocation = HTMLlocation.replace("%data%", bio.ContactInfo.location);
+ var formattedmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+ var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
+ var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+ var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#footerContacts").append(formattedmobile);
 $("#footerContacts").append(formattedemail);
 $("#footerContacts").append(formattedgithub);
 $("#footerContacts").append(formattedlocation);
+
+
